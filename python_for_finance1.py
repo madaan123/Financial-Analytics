@@ -1,4 +1,3 @@
-# -*- coding: utf-8 -*-
 """
 Created on Thu Jun  7 00:20:45 2018
 
@@ -26,3 +25,19 @@ df = web.DataReader('TSLA','morningstar',start,end)
 print(df.head())
 # df.tail will print last 5 rows
 print(df.tail())
+
+# Converting the resulsts to a csv file
+df.to_csv('TSLA.csv')
+
+# Reading data from a csv file to plot it
+df = pd.read_csv('tsla.csv', parse_dates=True, index_col=0)
+# Plotting the data on a graph
+df.plot()
+plt.show()
+
+# Plotting only a particular column of the csv file 
+df['Open'].plot()
+plt.show()
+
+# PLotting multiple columns of our choice
+df[['High','Low']]
