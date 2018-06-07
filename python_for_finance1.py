@@ -20,7 +20,7 @@ start = dt.datetime(2001,1,1)
 end = dt.datetime(2016,12,31)
 
 # Reading data from web of the stcoks tesla and morningstar
-df = web.DataReader('TSLA','morningstar',start,end)
+df = web.DataReader('AAPL','morningstar',start,end)
 # df.head prints first 5 rows of the database
 print(df.head())
 # df.tail will print last 5 rows
